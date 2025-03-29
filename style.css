@@ -1,0 +1,49 @@
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --text: #2d3748;
+}
+
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background: #f8f9fa;
+    color: var(--text);
+}
+
+#header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+    filter: saturate(1.1);
+    transition: all 0.3s;
+}
+
+.info-panel {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 500;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+@keyframes fadeInUp {
+    to { transform: translateY(0); opacity: 1; }
+}
